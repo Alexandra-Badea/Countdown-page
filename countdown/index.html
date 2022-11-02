@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Socks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <section class="home">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+
+        <div class="info">
+            <h1>A <span>MERRY</span> DEAL</h1>
+            <h2>Take 25% off Any Product</h2>
+            <p>Available for a limited time, 25% off Any Product. Don't miss out! Offer expires on Christmas</p>
+        </div>
+
+        <div class="clock">
+            <div>
+                <span class="days"></span>
+                <div class="text">Days</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="text">Hours</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="text">Minutes</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="text">Seconds</div>
+            </div>
+        </div>
+        <button type="button" class="open">GET 25% OFF</button>
+
+        <div class="underlay"></div>
+        <div class="modal">
+            <i class="fas fa-times close"></i>
+            <form>
+                <h2>Grab 25% OFF</h2>
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" class="cc-number" pattern="\d*" x-autocompletetype="cc-number" placeholder="Card number" required>
+                <input type="text" class="cc-exp" pattern="\d*" x-autocompletetype="cc-exp" placeholder="Expires MM/YY" required maxlength="9">
+                <input type="text" class="cc-cvc" pattern="\d*" x-autocompletetype="cc-csc" placeholder="Security code" required  autocomplete="off">
+                <button type="button">Pay</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

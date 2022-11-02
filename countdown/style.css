@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #ff0000;
+    --light-red: rgba(255, 0, 0, .6); 
+    --gray: #c7c0c0;
+}
+
+body {
+    color: #fff;
+    font-family: "Poppins", sans-serif; 
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: .9em;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(images/bg-phone.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -40px;
+    left: -50px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.info {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.info span {
+    color: var(--red);
+}
+
+.clock {
+    display: flex;
+    width: 95%;
+    margin: 3em auto;
+    justify-content: space-between;
+}
+
+.clock > div {
+    background: linear-gradient(rgba(0, 0, 0), rgb(100, 99, 99, .6));
+    width: 24%;
+    text-align: center;
+    font-size: .9rem;
+    padding: .8em 0;
+}
+
+.clock > div span {
+    padding: 1em 0;
+    font-size: 1.4rem;
+    /* background-color: var(--red); */
+}
+
+.home > button {
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--red);
+    border: none;
+    padding: .6em .8em;
+    margin: 2em auto;
+    display: block;
+    cursor: pointer;
+    outline: none;
+}
+
+.home > button:hover, .home > button:focus {
+    background-color: var(--light-red);
+}
+
+.modal {
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    top: .6rem;
+    right: .7rem;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.modal .close:hover, .modal .close:focus {
+    color: var(--red);
+}
+
+form {
+    width: 90%;
+    margin: 2em auto;
+    animation-name: open-modal;
+    animation-duration: .4s;
+}
+
+@keyframes open-modal {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+form h2 {
+    color: #000;
+}
+
+form input {
+    width: 100%;
+    padding: .4em;
+    margin: .6em auto;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    outline: none;
+}
+
+form input:focus {
+    border-bottom: 1px solid var(--red);
+}
+
+form button {
+    display: block;
+    margin: 1em auto;
+    font-size: 1.2rem;
+    padding: .6em 2em;
+    border: none;
+    background-color: var(--light-red);
+    cursor: pointer;
+    color: #fff;
+    outline: none;  
+}
+
+form button:hover, form button:focus {
+    background-color: var(--red);
+}
+
+.underlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.show-modal .modal {
+    display: block;
+}
+
+.show-modal .underlay {
+    display: block;
+}
+
+@media screen and (min-width: 38rem) {
+    .home {
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(images/bg-desktop.jpg) center no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        top: -25px;
+        left: -35px;
+    }
+    
+    .clock {
+        width: 50%;
+        justify-content: space-around;
+        margin: 6em auto;
+    }
+    
+    .clock > div {
+        max-width: 150px;
+    }
+
+    .home > button {
+        margin: 6em auto;
+    }
+}
